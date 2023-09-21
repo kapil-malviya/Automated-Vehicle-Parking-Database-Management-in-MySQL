@@ -6,7 +6,7 @@ import time
 
 
 # Define the database name
-database_name = "demo2"
+database_name = "Parking_Management"
 
 
 # Connect to MySQL 
@@ -232,7 +232,7 @@ db.commit()
 for i in range(n):
     parking_number = i + 1
     floor_number = random.choice([1, 2, 3, 4])
-    vehicle_id = random.randint(1, n)  # Assuming 500 vehicles were generated previously
+    vehicle_id = random.randint(1, n)  
     cursor.execute("""
     INSERT INTO parking_table (parking_number, floor_number, vehicle_id)
     VALUES (%s, %s, %s)
